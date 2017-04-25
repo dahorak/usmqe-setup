@@ -3,6 +3,7 @@
     name: tendrl
     description: Copr repo for tendrl owned by tendrl
     baseurl: "http://copr-be.cloud.fedoraproject.org/results/tendrl/tendrl/epel-7-x86_64/"
+    gpgcheck: no
   when: enable_master_repo
 
 - name: Copy rpm-gpg key first (hack)
