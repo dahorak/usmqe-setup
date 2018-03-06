@@ -12,7 +12,7 @@
 #   tendrl_password: password for tendrl user (default: adminuser)
 #
 
-- hosts: usm_server
+- hosts: tendrl-server
   remote_user: root
   vars:
     tendrl_user: "admin"

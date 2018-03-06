@@ -1,9 +1,9 @@
 ---
 #
-# Reboot all machines (usm_server,usm_nodes,usm_client) and wait till they boot up
+# Reboot all machines (tendrl-server,usm_nodes,usm_client) and wait till they boot up
 #
 - name: Reboot all servers
-  hosts: "usm_server:usm_nodes:usm_client"
+  hosts: "tendrl-server:usm_nodes:usm_client"
   remote_user: root
   tasks:
     - name: install package at
@@ -18,7 +18,7 @@
       shell: "echo reboot | at now"
 
 - name: Wait for all servers to boot up
-  hosts: "usm_server:usm_nodes:usm_client"
+  hosts: "tendrl-server:usm_nodes:usm_client"
   gather_facts: no
   remote_user: root
   tasks:

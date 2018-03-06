@@ -4,7 +4,7 @@
 #
 # Note: considering etcd, graphite, grafana and tendrl servers run on server machine.
 
-- hosts: usm_server:usm_nodes
+- hosts: tendrl-server:usm_nodes
   remote_user: root
   pre_tasks:
     - name: install firewalld
@@ -17,7 +17,7 @@
       delay: 5
 
 - name: Configure and enable firewalld on Tendrl server machine
-  hosts: usm_server
+  hosts: tendrl-server
   user: root
   vars:
     tendrl_uses_https: false

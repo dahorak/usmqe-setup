@@ -3,7 +3,7 @@
 # This playbook just tries to enable firewall on all machines of the cluster.
 
 - name: Configure and enable firewalld on skyrings/RHSCon 2.0 server machine
-  hosts: usm_server
+  hosts: tendrl-server
   user: root
   roles:
     - firewall-skyrings

@@ -4,7 +4,7 @@
 # Get content of tendrl-ansible package
 #
 
-- hosts: usm_server
+- hosts: tendrl-server
   remote_user: root
   vars:
     tendrl_ansible_dir: "./tendrl-ansible-tmp/"

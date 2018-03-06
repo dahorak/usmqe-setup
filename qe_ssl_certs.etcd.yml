@@ -1,7 +1,7 @@
 ---
 # SSL setup for etcd client-server authentication
 
-- hosts: usm_server
+- hosts: tendrl-server
   remote_user: root
   roles:
     - role: qe-ssl-cert

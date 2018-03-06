@@ -1,6 +1,6 @@
 ---
 
-- hosts: usm_server
+- hosts: tendrl-server
   remote_user: root
   handlers:
     - name: restart tendrl-notifier

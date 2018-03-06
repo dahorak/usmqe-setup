@@ -6,7 +6,7 @@
 # ansible-playbook -i usm2.hosts --extra-vars service_state=started services.skyrings.yml
 
 - name: Start/Stop all services on Skyrings server
-  hosts: "usm_server"
+  hosts: "tendrl-server"
   remote_user: root
 
   tasks:

@@ -7,7 +7,7 @@
 #
 # * snmptrapd (daemon receiving snmp trap messages) runs on usm_client
 # * tendrl is configured to send snmp traps to usm_client machine, which is
-#   implemented by tendrl-notifier service running on usm_server machine
+#   implemented by tendrl-notifier service running on tendrl-server machine
 #
 # The configuration is based on:
 #
@@ -89,7 +89,7 @@
         state: started
         enabled: yes
 
-- hosts: usm_server
+- hosts: tendrl-server
   remote_user: root
   vars:
     qe_snmp_user: "tendrlTrapUser"

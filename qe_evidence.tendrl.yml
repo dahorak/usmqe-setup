@@ -30,7 +30,7 @@
     - qe-evidence-probe
 
 - name: Download evidence from Tendrl server machine
-  hosts: usm_server
+  hosts: tendrl-server
   user: root
   vars:
     evidence_dirs:

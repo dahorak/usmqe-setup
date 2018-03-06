@@ -1,6 +1,6 @@
 ---
 - name: Change password of tendrl admin (usm_username from conf_path ini file)
-  hosts: usm_server
+  hosts: tendrl-server
   vars:
     new_password: "admin123"
 

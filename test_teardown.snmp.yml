@@ -21,7 +21,7 @@
         - '^authUser.*{{ qe_snmp_user }}'
         - '^createUser.*{{ qe_snmp_user }}'
 
-- hosts: usm_server
+- hosts: tendrl-server
   remote_user: root
   vars:
     qe_snmp_user: "tendrlTrapUser"
