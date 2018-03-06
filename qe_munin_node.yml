@@ -1,7 +1,7 @@
 ---
 # install and configure munin-node
 
-- hosts: "tendrl-server:usm_nodes:usm_client"
+- hosts: "tendrl-server:gluster-servers:usm_client"
   remote_user: root
   roles:
     - { role: epel, epel_enabled: 1, when: ansible_distribution == 'CentOS' }

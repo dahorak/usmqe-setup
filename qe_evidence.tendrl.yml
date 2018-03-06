@@ -60,7 +60,7 @@
     - qe-evidence-probe-journald
 
 - name: Download logs from Storage machines
-  hosts: usm_nodes
+  hosts: gluster-servers
   user: root
   vars:
     evidence_dirs:

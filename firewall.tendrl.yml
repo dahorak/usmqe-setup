@@ -4,7 +4,7 @@
 #
 # Note: considering etcd, graphite, grafana and tendrl servers run on server machine.
 
-- hosts: tendrl-server:usm_nodes
+- hosts: tendrl-server:gluster-servers
   remote_user: root
   pre_tasks:
     - name: install firewalld
@@ -68,7 +68,7 @@
       zone=public permanent=true state=enabled immediate=true
 
 - name: Configure and enable firewalld on Tendrl storage nodes
-  hosts: usm_nodes
+  hosts: gluster-servers
   user: root
   tasks:
   - name: Make sure firewalld is enabled and running

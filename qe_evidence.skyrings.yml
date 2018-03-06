@@ -41,7 +41,7 @@
     - role: qe-evidence
 
 - name: Download logs from Ceph Storage machines
-  hosts: usm_nodes
+  hosts: gluster-servers
   user: root
   vars:
     evidence_dirs:

@@ -5,7 +5,7 @@
 #   (containing comma separated list of urls pointing to repo config files)
 #   - additional_repos
 #   - additional_repos_tendrl-server
-#   - additional_repos_usm_nodes
+#   - additional_repos_gluster-servers
 #   - additional_repos_usm_client
 # * update all packages
 # * enable ntp sync via chronyd
@@ -24,7 +24,7 @@
       with_items: "{{ (additional_repos_tendrl-server | default('')).split(',') }}"
       when: item != ""
 
-- hosts: usm_nodes
+- hosts: gluster-servers
   remote_user: root
   tasks:
     - name: Add any additional repo(s)
@@ -35,7 +35,7 @@
       delay: 5
       register: result
       until: 'result|success'
-      with_items: "{{ (additional_repos_usm_nodes | default('')).split(',') }}"
+      with_items: "{{ (additional_repos_gluster-servers | default('')).split(',') }}"
       when: item != ""
 
 - hosts: usm_client
@@ -52,7 +52,7 @@
       with_items: "{{ (additional_repos_usm_client | default('')).split(',') }}"
       when: item != ""
 
-- hosts: tendrl-server:usm_nodes:usm_client
+- hosts: tendrl-server:gluster-servers:usm_client
   remote_user: root
   tasks:
     - name: Add any additional repo(s)

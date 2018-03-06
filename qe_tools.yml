@@ -2,7 +2,7 @@
 #
 # Install useful and auxiliary tools
 #
-- hosts: tendrl-server:usm_nodes:usm_client
+- hosts: tendrl-server:gluster-servers:usm_client
   remote_user: root
   tasks:
     - name: Install useful tools
